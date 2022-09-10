@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --first-color: rgba(10, 10, 139, 0.267);
+    --second-color: rgb(102, 102, 255);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    line-height: 1.5;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.rammy img {
+    transform: scale(0.9);
+    border-radius: 100%;
+    object-fit: scale-down;
+    height: 130px;
+}
+
+.showcase {
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('../images/mantyping.jpg');
+    background-repeat: no-repeat;
+    color: #fff;
+    border-radius: 20px;
+    padding: 120px 40px;
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 2;
+    background-size: cover;
+}
+
+.showcase h1 {
+    max-width: 500px;
+    font-weight: 800;
+    animation: slideInFromBottom 1s ease-in;
+}
+
+span {
+    color: var(--second-color);
+    font-weight: 800;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background: #fff;
+    border: #fff 1px solid;
+    font-size: 18px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: transparent;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.showcase .btn:hover {
+    padding: 15px 35px;
+}
+
+
+.grid {
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.grid .name {
+    text-align: center;
+    padding: 10px 20px;
+
+}
+
+.grid .name p {
+    font-size: 20px;
+
+}
+
+.grid .name h3 {
+    font-size: 25px;
+    margin-bottom: 7px;
+    margin-top: 25px;
+}
+
+ a i {
+    color: #fff;
+    padding: 30px 15px;
+    transition: 0.4s;
+}
+
+a i:hover {
+    transform: translateY(-15px);
+}
+
+ul {
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid .region {
+    font-size: 18px;
+    line-height: 2rem;
+    
+}
+
+.region .values {
+    text-align: right;
+}
+
+.skills .skil li{
+    padding: 20px 0;
+    border-bottom: 1px solid var(--second-color);
+    font-size: 18px;
+}
+
+
+
+
+.card {
+    background-color: var(--first-color);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #000;
+    padding: 30px 50px;
+}
+
+#about h2{
+    margin-bottom: 40px;
+   font-weight: 900;
+    
+}
+
+#about p {
+    font-size: 18px;
+    max-width: 600px;
+    font-weight:500;
+}
+
+.grid #about {
+    grid-column: 2 / span 3;
+}
+
+#about .btn {
+    margin-top: 20px;
+}
+
+#contact {
+    text-align: center;
+    margin: 60px auto;
+    max-width: 600px;
+    font-size: 17px;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media(max-width: 808px) {
+    
+    .grid {
+        display: block;
+    }
+
+    .showcase {
+        height: auto;
+        margin: 20px 0;
+        padding: 120px 20px;
+    }
+
+    .showcase h1 {
+        max-width: 700px;
+        line-height: 1.4;
+        animation: slideInFromTop 1s ease-in;
+    }
+
+    .card {
+        margin: 20px 0;
+    }
+
+    #contact h1 {
+        line-height: 1.2;
+    }
+}
+
+
+@media(max-width: 556px) {
+    .rammy img {
+        height: 110px;
+    }
+
+    .showcase h1 {
+        line-height: 1.6;
+    }
+
+}
